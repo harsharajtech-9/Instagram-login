@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     // Log to verify data is being captured
     console.log("Username:", username, "Password:", password);
 
-    fetch('http://localhost:5000/api/login', {
+    fetch('https://login-tracker-c4ho.onrender.com/api/login', {  // Updated API URL to use the live server URL
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ usernameOrEmail: username, password })  // Change 'username' to 'usernameOrEmail'
