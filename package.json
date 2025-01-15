@@ -1,4 +1,11 @@
 {
+  "name": "login-tracker",
+  "version": "1.0.0",
+  "description": "Backend service for login tracker app",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
