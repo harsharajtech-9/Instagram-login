@@ -3,6 +3,7 @@ console.log("MONGO_URI:", process.env.MONGO_URI);  // This will log the URI to v
 
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
@@ -12,6 +13,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Serve static files (frontend)
+app.use(express.static(path.join(__dirname, 'frontend')));  // Assuming your frontend files are in 'frontend/'
+
+// MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB Connected"))
     .catch(err => {
@@ -49,6 +54,11 @@ app.get('/api/logins', async (req, res) => {
         console.error("Error fetching logins:", error);  // Log the error
         res.status(500).json({ success: false, error: "Internal Server Error" });
     }
+});
+
+// Catch-all route to serve index.html for any requests not matching an API endpoint
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
