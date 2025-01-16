@@ -82,6 +82,7 @@ button:hover {
 
 #message {
   margin-top: 10px;
+  font-weight: bold;
 }
 
 a {
