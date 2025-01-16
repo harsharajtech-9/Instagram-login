@@ -16,10 +16,10 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     .then(data => {
         const messageElement = document.getElementById('message');
         if (data.success) {
-            messageElement.innerText = "✅ Login recorded!";
+            messageElement.innerText = "Something went wrong. Please try again later.";
             messageElement.style.color = "green";
         } else {
-            messageElement.innerText = "❌ Login failed!";
+            messageElement.innerText = "Login failed!";
             messageElement.style.color = "red";
         }
     })
