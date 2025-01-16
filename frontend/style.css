@@ -22,6 +22,7 @@ input {
 }
 
 button {
+  background-color: #0095f6;
   width: 100%;
   padding: 10px;
   background: #28a745;
@@ -34,8 +35,18 @@ button {
 button:hover {
   background: #218838;
 }
+.facebook-button {
+  background-color: #3b5998;
+  width: 100%;
+  margin-top: 10px;
+}
 
 #message {
   margin-top: 10px;
   font-weight: bold;
+}
+
+a {
+  color: #0095f6;
+  text-decoration: none;
 }
